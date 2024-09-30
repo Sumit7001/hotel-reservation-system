@@ -1,0 +1,26 @@
+<div style="margin-left: 5%;margin-right: 5%;" >
+    <h2 style="text-align: center;">Available Rooms</h2>
+    <div class="row row-cols-1 row-cols-md-4 g-4">
+    <div class="col mb-5 " *ngFor="let room of reservation">
+      <div class="card h-90">
+        <img [src]="room.imageUrl" class="card-img-top" alt="Product Image" style="max-height: 130px;">
+        <div class="card-body">
+          <h5 class="card-title">{{ room.type }}</h5>
+          <p class="card-text">$ {{ room.price }}</p>
+          <p class="card-text"><small class="text-muted">Category: {{ room.description}}</small></p>
+     
+        </div>
+       <!-- <button (click)="editProduct(product.id)" class="btn btn-secondary">Update</button>-->
+       <button (click)="bookRoom(room.id)" class="btn btn-danger">Book Now</button>
+      </div>
+  
+   </div>
+  </div>
+</div>
+          
+
+
+
+
+
+          

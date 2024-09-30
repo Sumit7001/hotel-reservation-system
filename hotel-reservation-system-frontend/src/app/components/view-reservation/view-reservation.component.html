@@ -1,0 +1,34 @@
+<div class="container">
+    <h2>Reservation History</h2>
+  
+    <div *ngIf="errorMessage" class="alert alert-danger">
+      {{ errorMessage }}
+    </div>
+  
+    <table class="table">
+      <thead>
+        <tr>
+          <th>ID</th>
+          <th>Room Type</th>
+          <th>Check-In Date</th>
+          <th>Check-Out Date</th>
+          <th>Status</th>
+          <th>Actions</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let reservation of reservations">
+          <td>{{ reservation.id }}</td>
+          <td>{{ reservation.roomType }}</td>
+          <td>{{ reservation.checkInDate }}</td>
+          <td>{{ reservation.checkOutDate }}</td>
+          <td>{{ reservation.status }}</td>
+          <td>
+            <button (click)="updateReservation(reservation)" class="btn btn-warning">Update</button>
+            <button (click)="cancelReservation(reservation.id)" class="btn btn-danger">Cancel</button>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+  

@@ -1,0 +1,31 @@
+<div class="app">
+  <header class="app-header">
+      <img src="/images/logo.gif" style="height: 50px;border: none;border-radius: 29px;" alt="">
+      <h1>BOOK YOUR HOTEL</h1>
+  </header>
+  <nav class="navbar">
+      <ul class="nav-list">
+         
+        <li class="nav-item"><a routerLink="/">Home</a></li>
+
+          <li class="nav-item"><a routerLink="/reservation/:id">Booking hotel</a></li>
+          <li class="nav-item"><a routerLink="/register">Register</a></li>
+          <li class="nav-item"><a routerLink="/login">Login</a></li>
+          
+          <li class="nav-item"><a routerLink="/room-details">See Rooms</a></li>
+          <li class="nav-item"><a routerLink="/view-reservation">View Reservation history</a></li>
+          
+ 
+      </ul>
+  </nav>
+  <div style="background-image: url(/images/pms11.jpeg);background-repeat: no-repeat;
+background-size: cover;">
+<section style="min-height: 80vh;">
+    <router-outlet></router-outlet>
+</section>
+</div>
+  <footer class='footer'>
+      <p>&copy; All Right Reserved </p>
+    </footer> 
+
+</div>
